@@ -12,24 +12,24 @@ export function About() {
           <img src={logoImage} alt="Logo" className="about-logo-image" />
         </div>
         <h3>Trae Account Manager</h3>
-        <p className="about-version">版本 1.0.0</p>
+        <p className="about-version">Version 1.0.0</p>
         <p className="about-desc">
-          Trae 账号使用量管理工具，帮助您轻松管理多个 Trae 账号的使用情况。
+          Trae account usage management tool, helping you easily manage the usage of multiple Trae accounts.
         </p>
       </div>
 
       <div className="about-section">
-        <h3>功能特性</h3>
+        <h3>Features</h3>
         <ul className="feature-list">
-          <li>📊 多账号使用量统计</li>
-          <li>🔄 实时刷新账号数据</li>
-          <li>📋 一键复制账号信息</li>
-          <li>🎨 简洁美观的界面</li>
+          <li>📊 Multi-account usage statistics</li>
+          <li>🔄 Real-time data refresh</li>
+          <li>📋 One-click copy account info</li>
+          <li>🎨 Clean and beautiful interface</li>
         </ul>
       </div>
 
       <div className="about-section">
-        <h3>技术栈</h3>
+        <h3>Tech Stack</h3>
         <div className="tech-tags">
           <span className="tech-tag">Tauri</span>
           <span className="tech-tag">React</span>
@@ -39,18 +39,18 @@ export function About() {
       </div>
 
       <div className="about-section">
-        <h3>赞赏支持</h3>
+        <h3>Appreciation</h3>
         <p className="about-desc">
-          如果这个工具对您有帮助，欢迎请作者喝杯咖啡 ☕
+          If this tool is helpful to you, feel free to buy the author a coffee ☕
         </p>
         <div className="appreciation-container">
           <img
             src={wxQrCode}
-            alt="微信赞赏码"
+            alt="WeChat Appreciation QR"
             className="qr-code"
             onClick={() => setShowImageModal(true)}
           />
-          <p className="appreciation-text">点击图片放大 · 微信扫码赞赏</p>
+          <p className="appreciation-text">Click to enlarge · Scan with WeChat to appreciate</p>
         </div>
       </div>
 
@@ -64,8 +64,8 @@ export function About() {
                 <line x1="6" y1="6" x2="18" y2="18"/>
               </svg>
             </button>
-            <img src={wxQrCode} alt="微信赞赏码" className="image-modal-img" />
-            <p className="image-modal-text">微信扫码赞赏</p>
+            <img src={wxQrCode} alt="WeChat Appreciation QR" className="image-modal-img" />
+            <p className="image-modal-text">Scan with WeChat to appreciate</p>
           </div>
         </div>
       )}

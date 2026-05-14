@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Trae Auto - 账号管理",
+        "title": "Trae Auto - Account Management",
         "width": 1000,
         "height": 700,
         "minWidth": 800,

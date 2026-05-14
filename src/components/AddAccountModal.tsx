@@ -23,14 +23,14 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
   // 监听浏览器登录事件
   useEffect(() => {
     const unlistenSuccess = listen<string>("login-success", (event) => {
-      onToast?.("success", `浏览器登录成功: ${event.payload}`);
+      onToast?.("success", `Browser login successful: ${event.payload}`);
       onAccountAdded?.();
       setBrowserLoginStarted(false);
       handleCloseInternal();
     });
 
     const unlistenFailed = listen<string>("login-failed", (event) => {
-      setError(event.payload || "登录失败");
+      setError(event.payload || "Login failed");
       setBrowserLoginStarted(false);
     });
 
@@ -122,14 +122,14 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
     try {
       const account = await api.readTraeAccount();
       if (account) {
-        onToast?.("success", `成功从 Trae IDE 读取账号: ${account.email}`);
+        onToast?.("success", `Successfully read account from Trae IDE: ${account.email}`);
         onAccountAdded?.();
         handleCloseInternal();
       } else {
-        setError("未找到 Trae IDE 登录账号或账号已存在");
+        setError("Trae IDE login account not found or account already exists");
       }
     } catch (err: any) {
-      setError(err.message || "读取 Trae IDE 账号失败");
+      setError(err.message || "Failed to read Trae IDE account");
     } finally {
       setLoading(false);
     }
@@ -139,7 +139,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
   const handleManualSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!tokenInput.trim()) {
-      setError("请输入 Token 或 API 响应");
+      setError("Please enter Token or API response");
       return;
     }
 
@@ -150,7 +150,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
       const token = extractToken(tokenInput);
 
       if (!token) {
-        setError("无法识别 Token，请确保输入正确的 Token 或 GetUserToken 接口响应");
+        setError("Could not recognize Token, please ensure you enter a correct Token or GetUserToken interface response");
         setLoading(false);
         return;
       }
@@ -162,7 +162,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
       setCookiesInput("");
       onClose();
     } catch (err: any) {
-      setError(err.message || "添加账号失败");
+      setError(err.message || "Failed to add account");
     } finally {
       setLoading(false);
     }
@@ -177,7 +177,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
     try {
       await api.startBrowserLogin();
     } catch (err: any) {
-      setError(err.message || "打开登录窗口失败");
+      setError(err.message || "Failed to open login window");
       setBrowserLoginStarted(false);
     } finally {
       setLoading(false);
@@ -197,7 +197,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
     <div className="modal-overlay" onClick={handleCloseInternal}>
       <div className="modal-content add-account-modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header-fixed">
-          <h2>添加账号</h2>
+          <h2>Add Account</h2>
           <button className="modal-close-btn" onClick={handleCloseInternal}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
               <line x1="18" y1="6" x2="6" y2="18"/>
@@ -217,7 +217,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
               </svg>
-              从 Trae IDE 读取
+              Read from Trae IDE
             </button>
             <button
               className={`mode-tab ${mode === "browser" ? "active" : ""}`}
@@ -229,7 +229,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
                 <line x1="2" y1="12" x2="22" y2="12"/>
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
-              浏览器登录
+              Browser Login
             </button>
             <button
               className={`mode-tab ${mode === "manual" ? "active" : ""}`}
@@ -240,7 +240,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
                 <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
                 <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
               </svg>
-              手动输入 Token
+              Manual Input Token
             </button>
           </div>
 
@@ -255,8 +255,8 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
                     <line x1="12" y1="22.08" x2="12" y2="12"/>
                   </svg>
                 </div>
-                <h3>自动读取本地 Trae IDE 账号</h3>
-                <p>系统将自动读取本地 Trae IDE 客户端当前登录的账号信息</p>
+                <h3>Automatically read local Trae IDE account</h3>
+                <p>The system will automatically read the currently logged-in account info from the local Trae IDE client</p>
               </div>
 
               {error && <div className="error-message">{error}</div>}
@@ -272,11 +272,11 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                   </svg>
                 </div>
-                <h3>浏览器授权登录</h3>
-                <p>将打开一个登录窗口，在其中登录 trae.ai 账号，系统将自动提取 Cookies 并添加账号</p>
+                <h3>Browser Authorization Login</h3>
+                <p>A login window will open where you can log in to your trae.ai account. The system will automatically extract Cookies and add the account.</p>
                 {browserLoginStarted && (
                   <p style={{ color: "var(--color-warning, #f0a030)", marginTop: "8px" }}>
-                    登录窗口已打开，请在窗口中完成登录...
+                    Login window opened, please complete login in the window...
                   </p>
                 )}
               </div>
@@ -294,18 +294,18 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
                 <textarea
                   value={tokenInput}
                   onChange={(e) => setTokenInput(e.target.value)}
-                  placeholder='粘贴 Token 或 GetUserToken 接口响应...'
+                  placeholder='Paste Token or GetUserToken interface response...'
                   rows={4}
                   disabled={loading}
                 />
                 <div className="form-help">
                   <details>
-                    <summary>如何获取 Token？</summary>
+                    <summary>How to get Token?</summary>
                     <ol>
-                      <li>打开 <a href="https://www.trae.ai/account-setting#usage" target="_blank" rel="noopener noreferrer">trae.ai 账号设置页面</a> 并登录</li>
-                      <li>按 <kbd>F12</kbd> 打开开发者工具，切换到 <strong>Network</strong> 标签</li>
-                      <li>刷新页面，在请求列表中找到 <code>GetUserToken</code></li>
-                      <li>点击该请求，在右侧 <strong>Response</strong> 标签中复制整个响应内容</li>
+                      <li>Open <a href="https://www.trae.ai/account-setting#usage" target="_blank" rel="noopener noreferrer">trae.ai account settings page</a> and log in</li>
+                      <li>Press <kbd>F12</kbd> to open developer tools, switch to <strong>Network</strong> tab</li>
+                      <li>Refresh the page, find <code>GetUserToken</code> in the request list</li>
+                      <li>Click the request, copy the entire response content in the <strong>Response</strong> tab on the right</li>
                     </ol>
                   </details>
                 </div>
@@ -314,23 +314,23 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
               {/* Cookies 输入（可选） */}
               <div className="form-section">
                 <label className="form-label">
-                  Cookies <span className="optional">（可选）</span>
+                  Cookies <span className="optional">(Optional)</span>
                 </label>
                 <textarea
                   value={cookiesInput}
                   onChange={(e) => setCookiesInput(e.target.value)}
-                  placeholder='粘贴 Cookie 值（可选）...'
+                  placeholder='Paste Cookie value (optional)...'
                   rows={3}
                   disabled={loading}
                 />
                 <div className="form-help">
                   <details>
-                    <summary>如何获取 Cookies？</summary>
+                    <summary>How to get Cookies?</summary>
                     <ol>
-                      <li>在上面获取 Token 的同一个页面</li>
-                      <li>在 <strong>Network</strong> 标签中点击任意请求</li>
-                      <li>在右侧 <strong>Headers</strong> 中找到 <code>Cookie</code> 字段</li>
-                      <li>复制整个 Cookie 值（很长的一串）</li>
+                      <li>On the same page as where you got the Token</li>
+                      <li>Click any request in the <strong>Network</strong> tab</li>
+                      <li>Find the <code>Cookie</code> field in <strong>Headers</strong> on the right</li>
+                      <li>Copy the entire Cookie value (a very long string)</li>
                     </ol>
                   </details>
                 </div>
@@ -343,7 +343,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
 
         <div className="modal-actions-fixed">
           <button type="button" onClick={handleCloseInternal} disabled={loading}>
-            取消
+            Cancel
           </button>
           {mode === "trae-ide" ? (
             <button
@@ -352,7 +352,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
               onClick={handleReadTraeAccount}
               disabled={loading}
             >
-              {loading ? "读取中..." : "读取本地账号"}
+              {loading ? "Reading..." : "Read Local Account"}
             </button>
           ) : mode === "browser" ? (
             <button
@@ -361,7 +361,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
               onClick={handleBrowserLogin}
               disabled={loading || browserLoginStarted}
             >
-              {browserLoginStarted ? "等待登录中..." : loading ? "打开中..." : "打开登录窗口"}
+              {browserLoginStarted ? "Waiting for login..." : loading ? "Opening..." : "Open Login Window"}
             </button>
           ) : (
             <button
@@ -370,7 +370,7 @@ export function AddAccountModal({ isOpen, onClose, onAdd, onToast, onAccountAdde
               onClick={() => handleManualSubmit()}
               disabled={loading}
             >
-              {loading ? "添加中..." : "添加账号"}
+              {loading ? "Adding..." : "Add Account"}
             </button>
           )}
         </div>
