@@ -7,489 +7,489 @@
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge)
 
-**一款强大的 Trae IDE 多账号管理工具**
+**A powerful multi-account management tool for Trae IDE**
 
-[功能特性](#-功能特性) • [快速开始](#-快速开始) • [使用指南](#-使用指南) • [常见问题](#-常见问题) • [贡献指南](#-贡献指南)
+[Features](#-features) • [Quick Start](#-quick-start) • [User Guide](#-user-guide) • [FAQ](#-faq) • [Contribution](#-contribution)
 
 </div>
 
 ---
 
-## ⭐ Star 星星走起 动动发财手点点 ⭐
+## ⭐ Star this repository ⭐
 
-> 如果这个项目对你有帮助，请不要吝啬你的 Star ⭐
-> 你的支持是我持续更新的最大动力！💪
+> If this project helps you, please don't hesitate to give it a Star ⭐
+> Your support is my greatest motivation for continuous updates! 💪
 
 <div align="center">
 
-### 👆 点击右上角 Star 按钮支持一下吧！ 👆
+### 👆 Click the Star button in the top right corner to support! 👆
 
 </div>
 
 ---
 
-## 📖 项目简介
+## 📖 Introduction
 
-Trae Account Manager 是一款专为 Trae IDE 用户打造的多账号管理工具。通过本工具，你可以轻松管理多个 Trae 账号，一键切换账号，实时查看使用量，让你的 Trae IDE 使用体验更加便捷高效！
+Trae Account Manager is a multi-account management tool specially built for Trae IDE users. Through this tool, you can easily manage multiple Trae accounts, switch accounts with one click, and view usage in real-time, making your Trae IDE experience more convenient and efficient!
 
-### 🎯 为什么选择 Trae Account Manager？
+### 🎯 Why choose Trae Account Manager?
 
-- 🔄 **一键切换账号** - 自动关闭 Trae IDE，切换账号后自动重新打开
-- 📊 **实时使用量监控** - 随时查看每个账号的 Token 使用情况
-- 🎨 **现代化界面** - 简洁美观的用户界面，操作流畅
-- 🔒 **安全可靠** - 本地存储，数据安全有保障
-- ⚡ **高效便捷** - 支持批量导入导出，快速管理多个账号
-- 🛠️ **功能丰富** - 机器码管理、使用记录查询、账号详情查看
+- 🔄 **One-click account switching** - Automatically closes Trae IDE, switches accounts, and restarts it
+- 📊 **Real-time usage monitoring** - Check Token usage for each account at any time
+- 🎨 **Modern interface** - Clean and beautiful UI with smooth operation
+- 🔒 **Safe and reliable** - Local storage ensures data security
+- ⚡ **Efficient and convenient** - Supports batch import/export for quick management
+- 🛠️ **Rich features** - Machine ID management, usage record queries, and account details
 
 ---
 
-## ⚠️ 免责声明
+## ⚠️ Disclaimer
 
 <div align="center">
 
-### 📢 重要提示：请仔细阅读以下声明
+### 📢 Important Notice: Please read carefully
 
 </div>
 
-> **本工具仅供学习和技术研究使用，使用前请务必了解以下内容：**
+> **This tool is for learning and technical research purposes only. Please understand the following before use:**
 
-- ⚠️ **风险自负**：使用者需自行承担所有风险，包括但不限于系统损坏、数据丢失、账号异常等
-- ⚖️ **法律风险**：本工具可能违反软件使用协议，请自行评估法律风险
-- 🚫 **责任豁免**：作者不承担任何直接或间接损失责任
-- 📚 **使用限制**：仅限个人学习研究，严禁商业用途
-- 🔒 **授权声明**：不得用于绕过软件正当授权机制
-- ✅ **同意条款**：继续使用即表示您已理解并同意承担相应风险
+- ⚠️ **Risk Assumption**: Users assume all risks, including but not limited to system damage, data loss, account anomalies, etc.
+- ⚖️ **Legal Risk**: This tool may violate software usage agreements. Please assess legal risks yourself.
+- 🚫 **Liability Waiver**: The author assumes no responsibility for any direct or indirect losses.
+- 📚 **Usage Restrictions**: Personal research only, strictly prohibited for commercial use.
+- 🔒 **Authorization Statement**: Must not be used to bypass software authorization mechanisms.
+- ✅ **Agreement to Terms**: Continued use indicates you understand and agree to assume the corresponding risks.
 
 <div align="center">
 
-**⚠️ 如果您不同意以上条款，请立即停止使用本工具 ⚠️**
+**⚠️ If you do not agree to the above terms, please stop using this tool immediately ⚠️**
 
 </div>
 
 ---
 
-## ✨ 功能特性
+## ✨ Features
 
-### 🎭 账号管理
+### 🎭 Account Management
 
-- ✅ **添加账号**
-  - 支持通过 Token 添加账号
-  - 自动获取账号信息（邮箱、用户名、头像等）
-  - 自动绑定机器码
+- ✅ **Add Account**
+  - Add accounts via Token
+  - Automatically fetch account info (Email, Username, Avatar, etc.)
+  - Automatically bind Machine ID
 
-- ✅ **账号切换**
-  - 一键切换到指定账号
-  - 自动关闭 Trae IDE
-  - 清除旧登录状态
-  - 写入新账号信息
-  - 自动重新打开 Trae IDE
-  - 切换前弹出确认对话框
+- ✅ **Account Switching**
+  - Switch to a specific account with one click
+  - Automatically closes Trae IDE
+  - Clears old login status
+  - Writes new account info
+  - Automatically restarts Trae IDE
+  - Confirmation dialog before switching
 
-- ✅ **账号信息**
-  - 显示账号邮箱、用户名
-  - 显示账号状态（正常/异常）
-  - 显示账号类型（礼包/普通）
-  - 显示当前使用的账号
-  - 显示账号添加时间
+- ✅ **Account Information**
+  - Displays Email and Username
+  - Displays account status (Normal/Abnormal)
+  - Displays account type (Gift/Regular)
+  - Shows the currently active account
+  - Shows when the account was added
 
-- ✅ **账号操作**
-  - 查看账号详细信息
-  - 更新账号 Token
-  - 删除账号
-  - 复制账号信息
+- ✅ **Account Operations**
+  - View detailed account info
+  - Update account Token
+  - Delete account
+  - Copy account info
 
-### 📊 使用量监控
+### 📊 Usage Monitoring
 
-- ✅ **实时使用量**
-  - 显示今日使用量
-  - 显示总使用量
-  - 显示剩余额度
-  - 使用量进度条可视化
+- ✅ **Real-time Usage**
+  - Displays today's usage
+  - Displays total usage
+  - Displays remaining quota
+  - Visual progress bar for usage
 
-- ✅ **使用记录**
-  - 查看详细使用事件
-  - 按时间范围筛选
-  - 显示每次使用的 Token 数量
-  - 显示使用时间和模型信息
+- ✅ **Usage Records**
+  - View detailed usage events
+  - Filter by time range
+  - Displays Token count for each use
+  - Displays usage time and model info
 
-### 🔧 机器码管理
+### 🔧 Machine ID Management
 
-- ✅ **Trae IDE 机器码**
-  - 查看当前 Trae IDE 机器码
-  - 复制机器码到剪贴板
-  - 刷新机器码
-  - 清除 Trae IDE 登录状态
-  - 重置机器码
+- ✅ **Trae IDE Machine ID**
+  - View current Trae IDE Machine ID
+  - Copy Machine ID to clipboard
+  - Refresh Machine ID
+  - Clear Trae IDE login status
+  - Reset Machine ID
 
-- ✅ **账号机器码绑定**
-  - 每个账号独立绑定机器码
-  - 切换账号时自动更新机器码
-  - 支持手动绑定机器码
+- ✅ **Account Machine ID Binding**
+  - Each account has an independent bound Machine ID
+  - Automatically updates Machine ID when switching accounts
+  - Supports manual binding of Machine ID
 
-### ⚙️ 系统设置
+### ⚙️ System Settings
 
-- ✅ **Trae IDE 路径配置**
-  - 自动扫描 Trae IDE 安装路径
-  - 手动选择 Trae.exe 文件
-  - 保存路径配置
-  - 切换账号后自动打开 Trae IDE
+- ✅ **Trae IDE Path Configuration**
+  - Automatically scan Trae IDE installation path
+  - Manually select `Trae.exe` file
+  - Save path configuration
+  - Automatically open Trae IDE after switching
 
-- ✅ **数据管理**
-  - 导出所有账号数据为 JSON
-  - 从 JSON 文件导入账号
-  - 清空所有账号数据
+- ✅ **Data Management**
+  - Export all account data as JSON
+  - Import accounts from JSON files
+  - Clear all account data
 
-### 🎨 界面特性
+### 🎨 Interface Features
 
-- ✅ **现代化设计**
-  - 简洁美观的卡片式布局
-  - 流畅的动画效果
-  - 响应式设计
+- ✅ **Modern Design**
+  - Clean and beautiful card-based layout
+  - Smooth animation effects
+  - Responsive design
 
-- ✅ **交互体验**
-  - Toast 消息提示
-  - 确认对话框
-  - 加载状态提示
-  - 右键菜单
+- ✅ **Interaction Experience**
+  - Toast message notifications
+  - Confirmation dialogs
+  - Loading state indicators
+  - Context menu support
 
 ---
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 📋 系统要求
+### 📋 System Requirements
 
 - Windows 10/11
-- Trae IDE 已安装
-- Node.js 16+ (开发环境)
+- Trae IDE installed
+- Node.js 16+ (Development environment)
 
-### 📥 下载安装
+### 📥 Download and Install
 
-1. 前往 [Releases](https://github.com/Yang-505/Trae-Account-Manager/releases) 页面
-2. 下载最新版本的安装包
-3. 运行安装程序
-4. 启动 Trae Account Manager
+1. Go to the [Releases](https://github.com/Yang-505/Trae-Account-Manager/releases) page
+2. Download the latest installer
+3. Run the installer
+4. Launch Trae Account Manager
 
-### 🔨 从源码构建
+### 🔨 Build from Source
 
 ```bash
-# 克隆仓库
+# Clone the repository
 git clone https://github.com/Yang-505/Trae-Account-Manager.git
 cd Trae-Account-Manager
 
-# 安装依赖
+# Install dependencies
 npm install
 
-# 开发模式运行
+# Run in development mode
 npm run tauri dev
 
-# 构建生产版本
+# Build production version
 npm run tauri build
 ```
 
 ---
 
-## 📚 使用指南
+## 📚 User Guide
 
-### 1️⃣ 首次使用
+### 1️⃣ First Time Use
 
-#### 配置 Trae IDE 路径
+#### Configure Trae IDE Path
 
-1. 打开应用后，点击左侧菜单的 **设置**
-2. 在 "Trae IDE 路径" 部分：
-   - 点击 **自动扫描** 按钮，系统会自动查找 Trae IDE
-   - 或点击 **手动设置** 按钮，选择 `Trae.exe` 文件位置
-3. 路径配置成功后会显示完整路径
+1. Open the app and click **Settings** in the left menu.
+2. In the "Trae IDE Path" section:
+   - Click **Auto Scan**, the system will automatically find Trae IDE.
+   - Or click **Manual Set** to choose the `Trae.exe` file location.
+3. Once configured, the full path will be displayed.
 
-### 2️⃣ 添加账号
+### 2️⃣ Adding an Account
 
-#### 方法一：通过 Token 添加
+#### Method 1: Add via Token
 
-1. 点击右上角的 **添加账号** 按钮
-2. 输入你的 Trae IDE Token
-3. 点击 **添加** 按钮
-4. 系统会自动获取账号信息并保存
+1. Click the **Add Account** button in the top right.
+2. Enter your Trae IDE Token.
+3. Click **Add**.
+4. The system will fetch and save account info automatically.
 
-#### 获取 Token 的方法
+#### How to get the Token
 
-1. 打开 Trae IDE
-2. 按 `F12` 打开开发者工具
-3. 切换到 `Application` 标签
-4. 在左侧找到 `Local Storage` → `vscode-webview://xxx`
-5. 找到包含 `iCubeAuthInfo` 的键
-6. 复制其中的 `token` 值
+1. Open Trae IDE.
+2. Press `F12` to open Developer Tools.
+3. Switch to the `Application` tab.
+4. On the left, find `Local Storage` → `vscode-webview://xxx`.
+5. Find the key containing `iCubeAuthInfo`.
+6. Copy the `token` value.
 
-### 3️⃣ 切换账号
+### 3️⃣ Switching Accounts
 
-1. 在账号列表中找到要切换的账号
-2. 点击账号卡片上的 **切换** 按钮
-3. 在确认对话框中点击 **确定**
-4. 系统会自动：
-   - 关闭当前运行的 Trae IDE
-   - 清除旧账号的登录状态
-   - 写入新账号的登录信息
-   - 重新打开 Trae IDE
+1. Find the account you want to switch to in the list.
+2. Click the **Switch** button on the account card.
+3. Click **OK** in the confirmation dialog.
+4. The system will automatically:
+   - Close the running Trae IDE
+   - Clear old login status
+   - Write new login info
+   - Restart Trae IDE
 
-> ⚠️ **注意**：切换账号前请保存 Trae IDE 中的工作内容
+> ⚠️ **Note**: Please save your work in Trae IDE before switching.
 
-### 4️⃣ 查看使用量
+### 4️⃣ Viewing Usage
 
-#### 查看概览
+#### Overview
 
-- 在仪表板页面可以看到所有账号的使用量概览
-- 每个账号卡片显示：
-  - 今日使用量
-  - 总使用量
-  - 使用进度条
+- View usage overviews for all accounts on the dashboard.
+- Each account card shows:
+  - Today's usage
+  - Total usage
+  - Usage progress bar
 
-#### 查看详细记录
+#### Detailed Records
 
-1. 点击账号卡片上的 **详情** 按钮
-2. 在详情页面切换到 **使用记录** 标签
-3. 可以查看：
-   - 每次使用的时间
-   - 使用的 Token 数量
-   - 使用的模型
-   - 请求类型
+1. Click the **Details** button on an account card.
+2. Switch to the **Usage Records** tab.
+3. You can see:
+   - Time of each use
+   - Tokens used
+   - Model used
+   - Request type
 
-### 5️⃣ 管理机器码
+### 5️⃣ Managing Machine ID
 
-#### 查看 Trae IDE 机器码
+#### View Trae IDE Machine ID
 
-1. 进入 **设置** 页面
-2. 在 "Trae IDE 机器码" 部分可以看到当前机器码
-3. 点击 **复制** 按钮可以复制到剪贴板
+1. Go to the **Settings** page.
+2. See the current Machine ID in the "Trae IDE Machine ID" section.
+3. Click **Copy** to copy it to the clipboard.
 
-#### 清除登录状态
+#### Clear Login Status
 
-1. 在设置页面点击 **清除登录状态** 按钮
-2. 确认操作
-3. 系统会：
-   - 重置 Trae IDE 机器码
-   - 清除所有登录信息
-   - 删除本地缓存数据
+1. Click **Clear Login Status** in the settings page.
+2. Confirm the operation.
+3. The system will:
+   - Reset Trae IDE Machine ID
+   - Clear all login info
+   - Delete local cache data
 
-> ⚠️ **注意**：清除登录状态后，Trae IDE 将变成全新安装状态，需要重新登录
+> ⚠️ **Note**: After clearing, Trae IDE will be in a fresh state and require re-login.
 
-### 6️⃣ 数据导入导出
+### 6️⃣ Data Import/Export
 
-#### 导出账号数据
+#### Export Account Data
 
-1. 进入 **设置** 页面
-2. 在 "数据管理" 部分点击 **导出** 按钮
-3. 选择保存位置
-4. 所有账号数据将导出为 JSON 文件
+1. Go to the **Settings** page.
+2. Click **Export** in the "Data Management" section.
+3. Choose a save location.
+4. All data will be exported as a JSON file.
 
-#### 导入账号数据
+#### Import Account Data
 
-1. 进入 **设置** 页面
-2. 在 "数据管理" 部分点击 **导入** 按钮
-3. 选择之前导出的 JSON 文件
-4. 账号数据将被导入到应用中
-
----
-
-## 🎯 使用场景
-
-### 场景一：多账号轮换使用
-
-如果你有多个 Trae 账号，可以通过本工具快速切换，充分利用每个账号的额度。
-
-### 场景二：团队协作
-
-团队成员可以导出自己的账号配置，分享给其他成员，快速配置开发环境。
-
-### 场景三：账号使用量监控
-
-实时监控每个账号的使用情况，合理分配使用额度，避免超额。
-
-### 场景四：测试不同账号
-
-开发者可以快速切换不同账号，测试不同权限下的功能表现。
+1. Go to the **Settings** page.
+2. Click **Import** in the "Data Management" section.
+3. Select a previously exported JSON file.
+4. Account data will be imported into the application.
 
 ---
 
-## ❓ 常见问题
+## 🎯 Use Cases
 
-### Q1: 切换账号后 Trae IDE 没有自动打开？
+### Scenario 1: Multi-account Rotation
 
-**A:** 请检查以下几点：
-1. 确认已在设置中配置了正确的 Trae IDE 路径
-2. 确认 Trae.exe 文件存在且可执行
-3. 查看应用日志，确认是否有错误信息
+If you have multiple Trae accounts, use this tool to switch quickly and maximize your daily quotas.
 
-### Q2: 添加账号时提示 Token 无效？
+### Scenario 2: Team Collaboration
 
-**A:** 请确认：
-1. Token 是否正确复制（没有多余的空格或换行）
-2. Token 是否已过期
-3. 网络连接是否正常
+Team members can export their account configurations to share with others for quick environment setup.
 
-### Q3: 切换账号后 Trae IDE 还是显示旧账号？
+### Scenario 3: Usage Monitoring
 
-**A:** 这种情况很少见，可以尝试：
-1. 手动关闭 Trae IDE
-2. 在设置中点击"清除登录状态"
-3. 重新切换账号
+Monitor usage for each account in real-time to allocate quotas reasonably and avoid overages.
 
-### Q4: 如何备份我的账号数据？
+### Scenario 4: Testing Different Accounts
+
+Developers can quickly switch between accounts to test features under different permissions.
+
+---
+
+## ❓ FAQ
+
+### Q1: Trae IDE didn't open automatically after switching?
+
+**A:** Please check:
+1. Ensure the correct Trae IDE path is configured in settings.
+2. Confirm `Trae.exe` exists and is executable.
+3. Check application logs for error messages.
+
+### Q2: Token invalid when adding an account?
+
+**A:** Please confirm:
+1. The Token was copied correctly (no extra spaces/newlines).
+2. The Token hasn't expired.
+3. Your network connection is stable.
+
+### Q3: Trae IDE still shows the old account after switching?
+
+**A:** This is rare. Try:
+1. Manually closing Trae IDE.
+2. Clicking "Clear Login Status" in settings.
+3. Switching accounts again.
+
+### Q4: How do I back up my account data?
 
 **A:**
-1. 进入设置页面
-2. 点击"导出数据"按钮
-3. 保存 JSON 文件到安全位置
-4. 需要恢复时使用"导入数据"功能
+1. Go to settings.
+2. Click "Export Data".
+3. Save the JSON file securely.
+4. Use "Import Data" to restore.
 
-### Q5: 应用数据存储在哪里？
+### Q5: Where is application data stored?
 
 **A:**
 - Windows: `%APPDATA%\com.sauce.trae-auto\`
-- 包含账号信息、配置等数据
+- Contains account info, configurations, etc.
 
-### Q6: 支持 macOS 吗？
+### Q6: Is macOS supported?
 
 **A:**
-目前仅支持 Windows 平台。macOS 版本正在开发中，敬请期待！
+Currently Windows only. macOS version is under development!
 
-> 注：Trae IDE 官方支持 Windows 和 macOS，但不支持 Linux。
-
----
-
-## 🛠️ 技术栈
-
-### 前端
-
-- **React 18** - UI 框架
-- **TypeScript** - 类型安全
-- **Vite** - 构建工具
-- **CSS3** - 样式设计
-
-### 后端
-
-- **Tauri 2** - 桌面应用框架
-- **Rust** - 后端逻辑
-- **Tokio** - 异步运行时
-- **Reqwest** - HTTP 客户端
-- **Serde** - 序列化/反序列化
-
-### 功能模块
-
-- **账号管理** - 多账号存储与切换
-- **API 客户端** - Trae API 交互
-- **机器码管理** - Windows 注册表操作
-- **文件系统** - Trae IDE 配置文件操作
-- **进程管理** - Trae IDE 进程控制
+> Note: Trae IDE officially supports Windows and macOS, but not Linux.
 
 ---
 
-## 📁 项目结构
+## 🛠️ Tech Stack
+
+### Frontend
+
+- **React 18** - UI Framework
+- **TypeScript** - Type Safety
+- **Vite** - Build Tool
+- **CSS3** - Styling
+
+### Backend
+
+- **Tauri 2** - Desktop App Framework
+- **Rust** - Backend Logic
+- **Tokio** - Async Runtime
+- **Reqwest** - HTTP Client
+- **Serde** - Serialization/Deserialization
+
+### Functional Modules
+
+- **Account Management** - Storage and switching
+- **API Client** - Interaction with Trae API
+- **Machine ID Management** - Windows Registry operations
+- **File System** - Trae IDE config file operations
+- **Process Management** - Trae IDE process control
+
+---
+
+## 📁 Project Structure
 
 ```
 Trae-Account-Manager/
-├── src/                      # 前端源码
-│   ├── components/          # React 组件
-│   │   ├── AccountCard.tsx      # 账号卡片
-│   │   ├── AddAccountModal.tsx  # 添加账号弹窗
-│   │   ├── ConfirmModal.tsx     # 确认对话框
-│   │   ├── DetailModal.tsx      # 详情弹窗
+├── src/                      # Frontend Source
+│   ├── components/          # React Components
+│   │   ├── AccountCard.tsx      # Account Card
+│   │   ├── AddAccountModal.tsx  # Add Account Modal
+│   │   ├── ConfirmModal.tsx     # Confirmation Dialog
+│   │   ├── DetailModal.tsx      # Details Modal
 │   │   └── ...
-│   ├── pages/               # 页面组件
-│   │   ├── Dashboard.tsx        # 仪表板
-│   │   ├── Settings.tsx         # 设置页面
-│   │   └── About.tsx            # 关于页面
-│   ├── api.ts               # API 接口
-│   ├── types/               # TypeScript 类型定义
-│   └── App.tsx              # 主应用组件
-├── src-tauri/               # Tauri 后端
+│   ├── pages/               # Page Components
+│   │   ├── Dashboard.tsx        # Dashboard
+│   │   ├── Settings.tsx         # Settings Page
+│   │   └── About.tsx            # About Page
+│   ├── api.ts               # API Interface
+│   ├── types/               # TS Type Definitions
+│   └── App.tsx              # Main App Component
+├── src-tauri/               # Tauri Backend
 │   ├── src/
-│   │   ├── account/         # 账号管理模块
-│   │   │   ├── account_manager.rs  # 账号管理器
-│   │   │   └── types.rs            # 账号类型定义
-│   │   ├── api/             # API 客户端模块
-│   │   │   ├── trae_api.rs         # Trae API 客户端
-│   │   │   └── types.rs            # API 类型定义
-│   │   ├── machine.rs       # 机器码管理
-│   │   ├── lib.rs           # Tauri 命令注册
-│   │   └── main.rs          # 应用入口
-│   ├── Cargo.toml           # Rust 依赖配置
-│   └── tauri.conf.json      # Tauri 配置
-├── package.json             # Node.js 依赖配置
-└── README.md                # 项目文档
+│   │   ├── account/         # Account Management
+│   │   │   ├── account_manager.rs  # Account Manager
+│   │   │   └── types.rs            # Account Types
+│   │   ├── api/             # API Client
+│   │   │   ├── trae_api.rs         # Trae API Client
+│   │   │   └── types.rs            # API Types
+│   │   ├── machine.rs       # Machine ID Management
+│   │   ├── lib.rs           # Tauri Command Registration
+│   │   └── main.rs          # Entry Point
+│   ├── Cargo.toml           # Rust Dependencies
+│   └── tauri.conf.json      # Tauri Config
+├── package.json             # Node.js Dependencies
+└── README.md                # Project Documentation
 ```
 
 ---
 
-## 🤝 贡献指南
+## 🤝 Contribution
 
-欢迎贡献代码、报告问题或提出建议！
+Contributions, issues, and feature requests are welcome!
 
-### 如何贡献
+### How to Contribute
 
-1. Fork 本仓库
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启一个 Pull Request
+1. Fork the project.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
 
-### 报告问题
+### Reporting Issues
 
-如果你发现了 Bug 或有功能建议，请：
+If you find a bug or have suggestions:
 
-1. 前往 [Issues](https://github.com/Yang-505/Trae-Account-Manager/issues) 页面
-2. 点击 "New Issue"
-3. 选择合适的模板
-4. 详细描述问题或建议
-
----
-
-## 📝 开发计划
-
-### 🎯 近期计划
-
-- [ ] 支持账号分组管理
-- [ ] 添加账号使用统计图表
-- [ ] 支持自] 添加账号备注功能
-- [ ] 支持主题切换（暗色/亮色）
-
-### 🚀 远期计划
-
-- [ ] 支持 macOS 平台
-- [ ] 添加账号使用提醒
-- [ ] 支持多语言（英文、日文等）
-- [ ] 添加账号使用报表导出
+1. Go to the [Issues](https://github.com/Yang-505/Trae-Account-Manager/issues) page.
+2. Click "New Issue".
+3. Choose a template.
+4. Describe the issue or suggestion in detail.
 
 ---
 
-## 📄 许可证
+## 📝 Roadmap
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+### 🎯 Short-term Plans
+
+- [ ] Support account group management
+- [ ] Add account usage statistical charts
+- [ ] Support adding account notes
+- [ ] Support theme switching (Dark/Light)
+
+### 🚀 Long-term Plans
+
+- [ ] Support macOS platform
+- [ ] Add account usage reminders
+- [ ] Multi-language support (English, Japanese, etc.)
+- [ ] Export account usage reports
 
 ---
 
-## 💖 致谢
+## 📄 License
 
-感谢所有为本项目做出贡献的开发者！
-
-特别感谢：
-- [Tauri](https://tauri.app/) - 优秀的桌面应用框架
-- [React](https://react.dev/) - 强大的 UI 框架
-- [Rust](https://www.rust-lang.org/) - 安全高效的系统编程语言
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📞 联系方式
+## 💖 Acknowledgements
+
+Thanks to all developers who contributed to this project!
+
+Special thanks to:
+- [Tauri](https://tauri.app/) - Excellent desktop app framework
+- [React](https://react.dev/) - Powerful UI framework
+- [Rust](https://www.rust-lang.org/) - Safe and efficient systems language
+
+---
+
+## 📞 Contact
 
 - GitHub: [@Yang-505](https://github.com/Yang-505)
-- Issues: [项目 Issues](https://github.com/Yang-505/Trae-Account-Manager/issues)
+- Issues: [Project Issues](https://github.com/Yang-505/Trae-Account-Manager/issues)
 
 ---
 
 <div align="center">
 
-## ⭐ 再次提醒：别忘了点 Star 哦！⭐
+## ⭐ Reminder: Don't forget to Star! ⭐
 
-**如果觉得这个项目不错，请给个 Star 支持一下！**
+**If you like this project, please give it a Star!**
 
-**你的 Star持续更新的动力！💪**
+**Your Star is the motivation for continuous updates! 💪**
 
 Made with ❤️ by Yang-505
 
@@ -497,8 +497,6 @@ Made with ❤️ by Yang-505
 
 ---
 
-## 🎉 Star 历史
-
-## Star History
+## 🎉 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Yang-505/Trae-Account-Manager&type=date&legend=top-left)](https://www.star-history.com/#Yang-505/Trae-Account-Manager&type=date&legend=top-left)
